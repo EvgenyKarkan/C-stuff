@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1401977350 source:/home/luba/C-stuff/C_stuff/main.c
+	<stdio.h>
+	<stdlib.h>
+
