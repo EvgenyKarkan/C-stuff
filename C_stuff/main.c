@@ -4,15 +4,17 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <complex.h>
-
-
+#include <float.h>
+#include <limits.h>
 
 void printSizeOfTypes();
+void printLimits();
 
 
 int main(int argc, char *argv[])
 {
     printSizeOfTypes();
+    printLimits();
 
     return 0;
 }
@@ -59,22 +61,85 @@ void printSizeOfTypes()
 
     printf("The size of an intptr_t: %u bytes \n", sizeof(intptr_t));
     printf("The size of an uintptr_t: %u bytes \n", sizeof(uintptr_t));
+    printf("The size of an intmax_t: %u bytes \n", sizeof(intmax_t));
+    printf("The size of an uintmax_t: %u bytes \n", sizeof(uintmax_t));
 
     printf("The size of an float: %u bytes \n", sizeof(float));
     printf("The size of an double: %u bytes \n", sizeof(double));
     printf("The size of an long double: %u bytes \n", sizeof(long double));
     printf("The size of an BOOL: %u bytes \n", sizeof(_Bool));
 
+    printf("The size of an NULL: %u bytes \n", sizeof(NULL));
+
+    printf("The size of an ptrdiff_t: %u bytes \n", sizeof(ptrdiff_t));
+
+    printf("The size of an char: %u bytes \n", sizeof(char));
+    printf("The size of an unsigned char: %u bytes \n", sizeof(unsigned char));
+    printf("The size of an wchar_t: %u bytes \n", sizeof(wchar_t));
+
+    printf("The size of an float _Complex: %u bytes \n", sizeof(float _Complex));
+    printf("The size of an double _Complex: %u bytes \n", sizeof(double _Complex));
+
+    printf("The size of an  size_t: %u bytes \n", sizeof(size_t));
+
+    printf("The size of an void: %u bytes \n", sizeof(void));
+
     printf("The size of an array of ints: %u bytes \n", sizeof(_array));
     printf("The size of an array from string: %u bytes \n", sizeof(name));
     printf("The size of an array of chars: %u bytes \n", sizeof(full_name));
 
     printf("The size of an struct: %u bytes \n", sizeof(theFoo));
+}
 
-    printf("The size of an float _Complex: %u bytes \n", sizeof(float _Complex));
-    printf("The size of an double _Complex: %u bytes \n", sizeof(double _Complex));
-    //printf("The size of an float _Imaginary: %u bytes \n", sizeof(float _Imaginary));
+void printLimits()
+{
+    printf("----------------------------------- \n");
+    printf("Number of bits in char: %u\n", CHAR_BIT);
+    printf("Max value of char: %d\n", CHAR_MAX);
+    printf("Max value of signed char: %d\n", SCHAR_MAX);
+    printf("Max value of unsigned char: %u\n", UCHAR_MAX);
 
-    printf("The size of an wchar_t: %u bytes \n", sizeof(wchar_t));
+    printf("Min value of char: %d\n", CHAR_MIN);
+    printf("Min value of signed char: %d\n", SCHAR_MIN);
+
+    printf("Max value of int: %d\n", INT_MAX);
+    printf("Min value of int: %d\n", INT_MIN);
+    printf("Max value of uint: %u\n", UINT_MAX);
+
+    printf("Max value of short: %d\n", SHRT_MAX);
+    printf("Min value of short: %d\n", SHRT_MIN);
+    printf("Max value of unsigned short: %u\n", USHRT_MAX);
+
+    printf("Max value of long: %ld\n", LONG_MAX);
+    printf("Min value of long: %ld\n", LONG_MIN);
+    printf("Max value of unsigned long: %lu\n", ULONG_MAX);
+
+    printf("Max value of long: %lld\n", LLONG_MAX);
+    printf("Min value of long: %lld\n", LLONG_MIN);
+    printf("Max value of unsigned long: %llu\n", ULLONG_MAX);
+
+    printf("Number of digits in float: %d\n", FLT_DIG);
+    printf("Min float value except in multiplication: %f\n", FLT_EPSILON);
+    printf("Max value of float: %g\n", FLT_MAX);
+    printf("Max value of float exp: %i\n", FLT_MAX_EXP);
+    printf("Min value of float: %f\n", FLT_MIN);
+
+    printf("Number of digits in double: %d\n", DBL_DIG);
+    printf("Min double value except in multiplication: %g\n", DBL_EPSILON);
+    printf("Max value of double: %g\n", DBL_MAX);
+    printf("Max value of double exp: %i\n", DBL_MAX_EXP);
+    printf("Min value of double: %g\n", DBL_MIN);
+
+    printf("Number of digits in long double: %d\n", LDBL_DIG);
+    printf("Min double value except in multiplication: %Lg\n", LDBL_EPSILON);
+    printf("Max value of long double: %Lg\n", LDBL_MAX);
+    printf("Max value of long double exp: %i\n", LDBL_MAX_EXP);
+    printf("Min value of long double: %Lg\n", LDBL_MIN);
+
+
+
+
+
+
 }
 
