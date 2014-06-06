@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <inttypes.h>
 #include <stdint.h>
+#include <stddef.h>
+#include <complex.h>
 
 
 
@@ -69,5 +71,10 @@ void printSizeOfTypes()
 
     printf("The size of an struct: %u bytes \n", sizeof(theFoo));
 
+    printf("The size of an float _Complex: %u bytes \n", sizeof(float _Complex));
+    printf("The size of an double _Complex: %u bytes \n", sizeof(double _Complex));
+    //printf("The size of an float _Imaginary: %u bytes \n", sizeof(float _Imaginary));
+
+    printf("The size of an wchar_t: %u bytes \n", sizeof(wchar_t));
 }
 
