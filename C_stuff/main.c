@@ -7,6 +7,9 @@
 #include <float.h>
 #include <limits.h>
 
+#include "Debug_macros.h"
+
+
 void printSizeOfTypes();
 void printLimits();
 
@@ -15,6 +18,8 @@ int main(int argc, char *argv[])
 {
     printSizeOfTypes();
     printLimits();
+
+    debug("Test macro");
 
     return 0;
 }
