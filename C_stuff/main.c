@@ -108,7 +108,7 @@ void printLimits()
 
     printf("Max value of short: %d\n", SHRT_MAX);
     printf("Min value of short: %d\n", SHRT_MIN);
-    printf("Max value of unsigned short: %u\n", USHRT_MAX);
+    printf("Max value of unsigned short: %hu\n", USHRT_MAX);
 
     printf("Max value of long: %ld\n", LONG_MAX);
     printf("Min value of long: %ld\n", LONG_MIN);
@@ -117,6 +117,8 @@ void printLimits()
     printf("Max value of long: %lld\n", LLONG_MAX);
     printf("Min value of long: %lld\n", LLONG_MIN);
     printf("Max value of unsigned long: %llu\n", ULLONG_MAX);
+
+    printf("Max number of characters that constitute a multibyte character in any supported locale: %d\n", MB_LEN_MAX);
 
     printf("Number of digits in float: %d\n", FLT_DIG);
     printf("Min float value except in multiplication: %f\n", FLT_EPSILON);
@@ -135,11 +137,5 @@ void printLimits()
     printf("Max value of long double: %Lg\n", LDBL_MAX);
     printf("Max value of long double exp: %i\n", LDBL_MAX_EXP);
     printf("Min value of long double: %Lg\n", LDBL_MIN);
-
-
-
-
-
-
 }
 
