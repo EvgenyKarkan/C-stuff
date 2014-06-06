@@ -1,6 +1,11 @@
 # depslib dependency file v1.0
-1402051663 source:/home/luba/C-stuff/C_stuff/main.c
+1402075899 source:/home/luba/C-stuff/C_stuff/main.c
 	<stdio.h>
 	<stdlib.h>
 	<inttypes.h>
+	<stdint.h>
+	<stddef.h>
+	<complex.h>
+	<float.h>
+	<limits.h>
 
