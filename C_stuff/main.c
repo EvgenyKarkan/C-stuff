@@ -29,12 +29,24 @@ void printSizeOfTypes()
     int _array[]     = {10, 12, 13, 14, 20, 42};
     char name[]      = "Chuck";
     char full_name[] = {'C', 'h', 'u', 'c', 'k', '.', 'N', 'o', 'r', 'i', 's', '\0'};
+
     struct Foo {
         int foo;
         char bar;
         double buzz;
     };
     struct Foo theFoo = {3, 'B', 3.1415};
+
+    enum dummyEnum {
+       dummyEnumOne,
+       dummyEnumTwo = 2,
+       dummyEnumThree = 3,
+       dummyEnumFour = 4
+    };
+
+    enum dummyEnum Jazz = 4;
+
+    printf("The size of an enum %u bytes \n", sizeof(Jazz));
 
     printf("The size of an int: %u bytes \n", sizeof(int));
     printf("The size of an unsigned int: %u bytes \n", sizeof(unsigned int));
