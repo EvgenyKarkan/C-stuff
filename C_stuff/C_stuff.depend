@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402152576 source:/home/luba/C-stuff/C_stuff/main.c
+1402170141 source:/home/luba/C-stuff/C_stuff/main.c
 	<stdio.h>
 	<stdlib.h>
 	<inttypes.h>

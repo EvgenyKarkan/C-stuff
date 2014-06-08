@@ -46,6 +46,8 @@ void printSizeOfTypes()
 
     enum dummyEnum Jazz = 4;
 
+    printf("--------------------%s \n", __func__);
+
     printf("The size of an enum %u bytes \n", sizeof(Jazz));
 
     printf("The size of an int: %u bytes \n", sizeof(int));
@@ -110,7 +112,8 @@ void printSizeOfTypes()
 
 void printLimits()
 {
-    printf("----------------------------------- \n");
+    printf("--------------------%s \n", __func__);
+
     printf("Number of bits in char: %u\n", CHAR_BIT);
     printf("Max value of char: %d\n", CHAR_MAX);
     printf("Max value of signed char: %d\n", SCHAR_MAX);
