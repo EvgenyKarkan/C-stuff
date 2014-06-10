@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402427374 source:/home/luba/C-stuff/C_stuff/main.c
+1402428683 source:/home/luba/C-stuff/C_stuff/main.c
 	<stdio.h>
 	<stdlib.h>
 	<inttypes.h>
@@ -10,8 +10,7 @@
 	<limits.h>
 	"Debug_macros.h"
 
-1402423778 /home/luba/C-stuff/C_stuff/Debug_macros.h
-	<stdio.h>
+1402429104 /home/luba/C-stuff/C_stuff/Debug_macros.h
 	<errno.h>
 	<string.h>
 

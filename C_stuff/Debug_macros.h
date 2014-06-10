@@ -1,7 +1,6 @@
 #ifndef DEBUG_MACROS_H_INCLUDED
 #define DEBUG_MACROS_H_INCLUDED
 
-#include <stdio.h>
 #include <errno.h>
 #include <string.h>
 
