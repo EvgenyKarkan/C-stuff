@@ -9,23 +9,24 @@
 
 #include "Debug_macros.h"
 
-
-void printSizeOfTypes();
-void printLimits();
+ void printSizeOfTypes();
+ void printLimits();
+ void pointersFunction();
 
 
 int main(int argc, char *argv[])
 {
     printSizeOfTypes();
     printLimits();
-
-    debug("Test macro");
+    pointersFunction();
 
     return 0;
 }
 
-void printSizeOfTypes()
+ void printSizeOfTypes()
 {
+    debug();
+
     int _array[]     = {10, 12, 13, 14, 20, 42};
     char name[]      = "Chuck";
     char full_name[] = {'C', 'h', 'u', 'c', 'k', '.', 'N', 'o', 'r', 'i', 's', '\0'};
@@ -45,8 +46,6 @@ void printSizeOfTypes()
     };
 
     enum dummyEnum Jazz = 4;
-
-    printf("--------------------%s \n", __func__);
 
     printf("The size of an enum %u bytes \n", sizeof(Jazz));
 
@@ -110,9 +109,9 @@ void printSizeOfTypes()
     printf("The size of an struct: %u bytes \n", sizeof(theFoo));
 }
 
-void printLimits()
+ void printLimits()
 {
-    printf("--------------------%s \n", __func__);
+    debug();
 
     printf("Number of bits in char: %u\n", CHAR_BIT);
     printf("Max value of char: %d\n", CHAR_MAX);
@@ -159,3 +158,31 @@ void printLimits()
     printf("Min value of long double: %Lg\n", LDBL_MIN);
 }
 
+ void pointersFunction ()
+{
+    debug();
+
+    int x[5];
+    printf("%p\n", x);
+    printf("%p\n", x+1);
+    printf("%p\n", &x);
+    printf("%p\n", &x+1);
+
+    int foo = 0;
+    int *foo_ptr = &foo;
+
+    int bar = *foo_ptr;
+    *foo_ptr = 42;
+    printf("%d \n", bar);
+
+    int array[] = { 45, 67, 89 };
+    int *array_ptr = array;
+    printf(" first element: %i\n", *(array_ptr++));
+    printf(" second element: %i\n", *(array_ptr++));
+    printf(" third element: %i\n", *array_ptr);
+
+    printf("%i\n", array[0]);
+
+    int *array_ptr1 = &array[1];
+    printf("%i\n", array_ptr1[1]);
+}
