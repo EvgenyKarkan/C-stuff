@@ -185,4 +185,14 @@ int main(int argc, char *argv[])
 
     int *array_ptr1 = &array[1];
     printf("%i\n", array_ptr1[1]);
+
+    int test = 42;
+    int *pointer = &test;
+    int **indirect = &pointer;
+
+    printf("Test address %p\n", &test);
+    printf("Pointer value %d\n", *pointer);
+    printf("Pointer address %p\n", &pointer);
+    printf("Indirect value %d\n", **indirect);
+    printf("Indirect address %p\n", &indirect);
 }
