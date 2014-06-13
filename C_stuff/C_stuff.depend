@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1402588816 source:/home/luba/C-stuff/C_stuff/main.c
+1402692428 source:/home/luba/C-stuff/C_stuff/main.c
 	<stdio.h>
 	<stdlib.h>
 	<inttypes.h>
@@ -8,9 +8,21 @@
 	<complex.h>
 	<float.h>
 	<limits.h>
+	<string.h>
 	"Debug_macros.h"
+	"Pointers.h"
 
 1402497738 /home/luba/C-stuff/C_stuff/Debug_macros.h
 	<errno.h>
 	<string.h>
+
+1402693064 source:/home/luba/C-stuff/C_stuff/Pointers.c
+	"Pointers.h"
+
+1402690364 /home/luba/C-stuff/C_stuff/Pointers.c
+	<Pointers.h>
+
+1402693064 /home/luba/C-stuff/C_stuff/Pointers.h
+	<stdio.h>
+	"Debug_macros.h"
 

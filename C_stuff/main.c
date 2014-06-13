@@ -6,12 +6,13 @@
 #include <complex.h>
 #include <float.h>
 #include <limits.h>
+#include <string.h>
 
 #include "Debug_macros.h"
+#include "Pointers.h"
 
- void printSizeOfTypes();
- void printLimits();
- void pointersFunction();
+void printSizeOfTypes();
+void printLimits();
 
 
 int main(int argc, char *argv[])
@@ -19,6 +20,7 @@ int main(int argc, char *argv[])
     printSizeOfTypes();
     printLimits();
     pointersFunction();
+    printPointersToFunction();
 
     return 0;
 }
@@ -156,43 +158,4 @@ int main(int argc, char *argv[])
     printf("Max value of long double: %Lg\n", LDBL_MAX);
     printf("Max value of long double exp: %i\n", LDBL_MAX_EXP);
     printf("Min value of long double: %Lg\n", LDBL_MIN);
-}
-
- void pointersFunction ()
-{
-    debug();
-
-    int x[5];
-    printf("%p\n", x);
-    printf("%p\n", x+1);
-    printf("%p\n", &x);
-    printf("%p\n", &x+1);
-
-    int foo = 0;
-    int *foo_ptr = &foo;
-
-    int bar = *foo_ptr;
-    *foo_ptr = 42;
-    printf("%d \n", bar);
-
-    int array[] = { 45, 67, 89 };
-    int *array_ptr = array;
-    printf(" first element: %i\n", *(array_ptr++));
-    printf(" second element: %i\n", *(array_ptr++));
-    printf(" third element: %i\n", *array_ptr);
-
-    printf("%i\n", array[0]);
-
-    int *array_ptr1 = &array[1];
-    printf("%i\n", array_ptr1[1]);
-
-    int test = 42;
-    int *pointer = &test;
-    int **indirect = &pointer;
-
-    printf("Test address %p\n", &test);
-    printf("Pointer value %d\n", *pointer);
-    printf("Pointer address %p\n", &pointer);
-    printf("Indirect value %d\n", **indirect);
-    printf("Indirect address %p\n", &indirect);
 }
