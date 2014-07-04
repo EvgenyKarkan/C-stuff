@@ -36,6 +36,10 @@
 		<Unit filename="Debug_macros.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="Pointers.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Pointers.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
