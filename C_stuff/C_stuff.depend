@@ -26,3 +26,27 @@
 	<stdio.h>
 	"Debug_macros.h"
 
+1404469566 source:/Users/karkanevgenij/Development/C-stuff/C_stuff/main.c
+	<stdio.h>
+	<stdlib.h>
+	<inttypes.h>
+	<stdint.h>
+	<stddef.h>
+	<complex.h>
+	<float.h>
+	<limits.h>
+	<string.h>
+	"Debug_macros.h"
+	"Pointers.h"
+
+1404468649 /Users/karkanevgenij/Development/C-stuff/C_stuff/Debug_macros.h
+	<errno.h>
+	<string.h>
+
+1404468649 /Users/karkanevgenij/Development/C-stuff/C_stuff/Pointers.h
+	<stdio.h>
+	"Debug_macros.h"
+
+1404468649 source:/Users/karkanevgenij/Development/C-stuff/C_stuff/Pointers.c
+	"Pointers.h"
+
